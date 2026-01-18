@@ -1,0 +1,156 @@
+{
+  "design_system_profile": {
+    "name": "Lodge & Luxury - Minimalist Travel UI",
+    "description": "A clean, editorial-style design system for a high-end travel booking platform. Characterized by heavy use of whitespace, pill-shaped UI elements, strong typography hierarchy, and high-fidelity imagery.",
+    "vibe": ["Minimalist", "Aspirational", "Airy", "Modern", "Editorial"],
+    "design_tokens": {
+      "colors": {
+        "background": {
+          "primary": "#FFFFFF",
+          "secondary": "#F8F8F8",
+          "card_accent_teal": "#7C9C95",
+          "card_accent_sage": "#A4B4A8"
+        },
+        "text": {
+          "primary": "#000000",
+          "secondary": "#6B6B6B",
+          "tertiary": "#888888",
+          "inverted": "#FFFFFF"
+        },
+        "action": {
+          "primary_bg": "#1A1A1A",
+          "primary_text": "#FFFFFF",
+          "secondary_bg": "#F2F2F2"
+        },
+        "ui_elements": {
+          "border_light": "#E5E5E5",
+          "tag_bg": "rgba(255, 255, 255, 0.9)"
+        }
+      },
+      "typography": {
+        "font_family_primary": "San Francisco, Inter, or DM Sans (Clean Geometric Sans-serif)",
+        "scale": {
+          "display_h1": {
+            "weight": "800",
+            "size": "3.5rem",
+            "line_height": "1.1",
+            "letter_spacing": "-0.02em",
+            "case": "Sentence"
+          },
+          "heading_h2": {
+            "weight": "700",
+            "size": "2rem",
+            "line_height": "1.2"
+          },
+          "heading_h3": {
+            "weight": "600",
+            "size": "1.5rem"
+          },
+          "body_regular": {
+            "weight": "400",
+            "size": "1rem",
+            "line_height": "1.6",
+            "color": "text.secondary"
+          },
+          "nav_link": {
+            "weight": "500",
+            "size": "0.75rem",
+            "case": "Uppercase",
+            "letter_spacing": "0.05em",
+            "color": "text.tertiary"
+          },
+          "price_tag": {
+            "weight": "700",
+            "size": "0.875rem"
+          }
+        }
+      },
+      "shapes": {
+        "border_radius": {
+          "sm": "8px",
+          "md": "16px",
+          "lg": "24px",
+          "xl": "32px",
+          "pill": "999px"
+        }
+      },
+      "shadows": {
+        "card": "0 4px 20px rgba(0, 0, 0, 0.05)",
+        "float": "0 10px 40px rgba(0, 0, 0, 0.08)"
+      }
+    },
+    "component_library": {
+      "buttons": {
+        "primary": {
+          "shape": "pill",
+          "bg": "colors.action.primary_bg",
+          "text": "colors.action.primary_text",
+          "padding": "12px 24px",
+          "font_weight": "600"
+        },
+        "icon_only": {
+          "shape": "circle",
+          "bg": "colors.action.primary_bg",
+          "icon_color": "white"
+        },
+        "ghost": {
+          "bg": "transparent",
+          "text": "colors.text.primary",
+          "decoration": "underline"
+        }
+      },
+      "cards": {
+        "property_card": {
+          "radius": "shapes.border_radius.lg",
+          "layout": "Image dominant with floating price tag pill.",
+          "text_alignment": "Left aligned below image or overlay on bottom-left."
+        },
+        "feature_card": {
+          "radius": "shapes.border_radius.xl",
+          "overlay": "Gradient or solid color overlay with white text."
+        }
+      },
+      "inputs": {
+        "search_bar": {
+          "shape": "pill",
+          "bg": "colors.background.primary",
+          "border": "1px solid colors.ui_elements.border_light",
+          "shadow": "shadows.float",
+          "content": "Text input on left, circular icon button on right."
+        }
+      },
+      "navigation": {
+        "style": "Minimalist top bar",
+        "logo": "Iconographic logo on left",
+        "links": "Centered, uppercase, small sans-serif",
+        "cta": "Pill button on right"
+      }
+    },
+    "layout_rules": {
+      "grid": "12-column flexible grid",
+      "whitespace": "Generous. Use 2x to 4x standard padding between distinct sections.",
+      "alignment": "Left-aligned typography, centered container max-width approx 1200px."
+    },
+    "visual_assets": {
+      "imagery_style": {
+        "subject": "Architectural, Interior Design, Nature Landscapes",
+        "lighting": "Natural, bright, warm daylight",
+        "treatment": "No filters, high contrast, sharp focus",
+        "framing": "Wide angles to show context"
+      },
+      "icons": {
+        "style": "Line/Stroke icons",
+        "weight": "Regular (1.5px - 2px stroke)",
+        "color": "colors.text.primary"
+      }
+    },
+    "css_replication_hints": {
+      "tailwind_classes": {
+        "pill_button": "rounded-full bg-black text-white px-6 py-3 font-medium hover:bg-gray-800 transition",
+        "card_container": "rounded-[32px] overflow-hidden relative group",
+        "display_text": "text-5xl font-extrabold tracking-tight leading-none text-gray-900",
+        "glass_tag": "bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-bold shadow-sm"
+      }
+    }
+  }
+}

@@ -36,37 +36,54 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col gap-16">
       {/* Hero Section */}
-      <section className="text-center py-16">
-        <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
-          Rent Ski Gear<br />
-          <span className="text-[#7C9C95]">From Locals</span>
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-          Discover quality ski equipment from trusted renters across Europe. 
-          Save money, ski more.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="#rentals"
-            className="px-8 py-4 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition-all shadow-lg"
-          >
-            Browse Rentals
-          </Link>
-          {canCreateListing ? (
+      <section className="relative text-center py-24 sm:py-32 overflow-hidden rounded-[32px]">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/4274798-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+        
+        {/* Content */}
+        <div className="relative z-10">
+          <h1 className="text-5xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6 drop-shadow-lg">
+            Rent Ski Gear<br />
+            <span className="text-white/90">From Locals</span>
+          </h1>
+          <p className="text-xl text-white/95 max-w-2xl mx-auto mb-10 drop-shadow-md px-4">
+            Discover quality ski equipment from trusted renters across Europe. 
+            Save money, ski more.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
             <Link 
-              href="/rentals/create"
-              className="px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-semibold hover:bg-gray-50 transition-all"
+              href="#rentals"
+              className="px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-all shadow-lg"
             >
-              + List Your Gear
+              Browse Rentals
             </Link>
-          ) : !userProfile && (
-            <Link 
-              href="/auth/signup"
-              className="px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-semibold hover:bg-gray-50 transition-all"
-            >
-              List Your Gear
-            </Link>
-          )}
+            {canCreateListing ? (
+              <Link 
+                href="/rentals/create"
+                className="px-8 py-4 bg-white/20 text-white border border-white/40 backdrop-blur-sm rounded-full font-semibold hover:bg-white/30 transition-all"
+              >
+                + List Your Gear
+              </Link>
+            ) : !userProfile && (
+              <Link 
+                href="/auth/signup"
+                className="px-8 py-4 bg-white/20 text-white border border-white/40 backdrop-blur-sm rounded-full font-semibold hover:bg-white/30 transition-all"
+              >
+                List Your Gear
+              </Link>
+            )}
+          </div>
         </div>
       </section>
 

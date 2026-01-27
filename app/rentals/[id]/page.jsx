@@ -84,7 +84,7 @@ export default async function RentalDetailPage({ params }) {
                 src={rental.image_url} 
                 alt={rental.title}
                 fill
-                className="object-cover"
+                className="object-contain object-top"
                 priority
               />
             ) : (

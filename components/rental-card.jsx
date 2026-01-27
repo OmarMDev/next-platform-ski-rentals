@@ -7,13 +7,13 @@ export function RentalCard({ rental, userProfile }) {
   return (
     <div className="bg-white rounded-[24px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
       {/* Image Section */}
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden bg-gray-50">
         {rental.image_url ? (
           <Image 
             src={rental.image_url} 
             alt={rental.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            className="object-contain group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-[#7C9C95]/20 to-[#A4B4A8]/20 flex items-center justify-center">

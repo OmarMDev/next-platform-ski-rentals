@@ -2,9 +2,6 @@
 
 > A peer-to-peer ski equipment rental platform built with Next.js 16, Supabase, and deployed on Netlify.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-platform-starter)
-
----
 
 ## 🎿 Overview
 
